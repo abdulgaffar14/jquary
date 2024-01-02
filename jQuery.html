@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery.js"></script>
+
+    <style>
+        .box{
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Abdul Ghaffar</div>
+
+    <input type="button" value="animate" id="animate">
+    <input type="button" value="fadeOut" id="fadeOut">
+    <input type="button" value="fadeIn" id="fadeIn">
+    <input type="button" value="Append" id="app">
+    <input type="button" value="Prepend" id="pre">
+    <input type="button" value="After" id="aft">
+    <input type="button" value="Before" id="bfr">
+    
+
+    <script>
+        $('#animate').click(function(){
+        $('.box').animate({left:"350px",height:"120px",opacity:"0.2",fontSize:"3rem"})
+     })
+
+     $('#fadeOut').click(function(){
+       $('.box').fadeOut()
+     })
+     $('#fadeIn').click(function(){
+        $('.box').fadeIn(2000)
+     })
+
+
+     $('#app').click(function () {
+         $('.box').append('<h4>hello</h4>')
+        
+     })
+
+     $('#pre').click (function() {
+         $('.box').prepend(' <h3>hello</h3>')
+        
+     })
+
+
+     $('#aft').click(function () {
+         $('.box').after('<p>hi</p>')
+        
+    })
+
+     $('#bfr').click(function () {
+        $('.box').before('<p>hi</p>')
+        
+     })
+
+
+    </script>
+</body>
+</html>
